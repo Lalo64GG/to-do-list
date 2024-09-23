@@ -3,7 +3,7 @@ import { Task } from './Task';
 import { Modal } from './Modal';
 import { supabase } from './supabaseClient'; // Importa tu cliente Supabase
 
-const TodoList = () => {
+export const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -117,5 +117,3 @@ const TodoList = () => {
     </div>
   );
 };
-
-export default TodoList;
