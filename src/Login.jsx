@@ -1,12 +1,13 @@
 import React from "react";
 import { useInputValidation } from "./useInputValidation";
 import { supabase } from "./supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const email = useInputValidation();
   const password = useInputValidation();
 
- 
+ const navigate =  useNavigate()
   const handleLogin = async () => {
     // Validar los campos de email y password
     email.validate();
@@ -34,9 +35,7 @@ export const Login = () => {
       }
 
       if (user) {
-        // Si se encontró un usuario, procede con el login
-        console.log("Email encontrado", user);
-        // Aquí puedes realizar alguna acción adicional como redirigir al dashboard
+        navigate("/task")
       }
     } catch (err) {
       // Manejo de errores inesperados
