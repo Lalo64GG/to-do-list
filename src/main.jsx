@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import './index.css'
 import { Login } from './Login';
-import {TodoList} from './todolist.jsx';
+import {TodoList} from './todolist';
 
 const router = createBrowserRouter([
   {
